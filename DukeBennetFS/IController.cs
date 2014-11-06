@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace DukeBennetFS
 {
-    class Program
+    interface IController
     {
-        static void Main(string[] args)
-        {
-            Router router = new Router();
-            router.Route(args);
-        }
+      void Process(string command, IEnumerable<String> args);
     }
 }

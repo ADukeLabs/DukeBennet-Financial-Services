@@ -54,12 +54,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\BankInformationDB.cs" />
+    <Compile Include="DAL\Models\Account.cs" />
+    <Compile Include="Migrations\201411062221525_InitialCreate.cs" />
+    <Compile Include="Migrations\201411062221525_InitialCreate.Designer.cs">
+      <DependentUpon>201411062221525_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411062238594_AccountAdded.cs" />
+    <Compile Include="Migrations\201411062238594_AccountAdded.Designer.cs">
+      <DependentUpon>201411062238594_AccountAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201411062221525_InitialCreate.resx">
+      <DependentUpon>201411062221525_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411062238594_AccountAdded.resx">
+      <DependentUpon>201411062238594_AccountAdded.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

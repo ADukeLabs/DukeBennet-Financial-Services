@@ -1,3 +1,5 @@
+using DukeBennetFS.DAL.Models;
+
 namespace DukeBennetFS.DAL
 {
     using System;
@@ -12,6 +14,7 @@ namespace DukeBennetFS.DAL
         {
         }
 
+        public DbSet<Account> Accounts { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

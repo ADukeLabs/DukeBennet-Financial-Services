@@ -1,3 +1,5 @@
+using DukeBennetFS.DAL.Models;
+
 namespace DukeBennetFS.Migrations
 {
     using System;
@@ -19,12 +21,13 @@ namespace DukeBennetFS.Migrations
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data. E.g.
             //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
+            
+            context.Accounts.Add(
+
+              new Account { CustomerFullName = Faker.Name.FullName(), AccountNumber = Faker.RandomNumber.Next(1000000, 9999999).ToString(), AccountType = "savings", Balance = Faker.RandomNumber.Next(0, 100000) / 100.0m}
+
+            );
+            context.SaveChanges();
             //
         }
     }

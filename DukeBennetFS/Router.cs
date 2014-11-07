@@ -12,7 +12,7 @@ namespace DukeBennetFS
         {
             String command = args.Length != 0 ? args[0].ToLowerInvariant() : String.Empty;
 
-            IController controller;
+            IController controller = new CustomerController();
             switch (command)
             {
                 case "Access":
@@ -24,16 +24,19 @@ namespace DukeBennetFS
                 case "Balance":
                     controller = new BalanceController();
                     break;
+                case "Create":
+                    controller = new CustomerController();
+                    break; 
                 case "help":
                 case "h":
                 case "-h":
                 //    controller = new HelpControler();
                     break;
                 default:
-                    controller = new welcomeController();
+                 //   controller = new welcomeController();
                     break;
             }
-
+            controller.Process(command, args);
         }
     }
 }

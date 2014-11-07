@@ -55,7 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessController.cs" />
+    <Compile Include="AdminController.cs" />
     <Compile Include="BalanceController.cs" />
+    <Compile Include="CustomerController.cs" />
     <Compile Include="DAL\BankInformationDB.cs" />
     <Compile Include="DAL\Models\Account.cs" />
     <Compile Include="IController.cs" />

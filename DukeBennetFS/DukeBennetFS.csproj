@@ -60,6 +60,7 @@
     <Compile Include="CustomerController.cs" />
     <Compile Include="DAL\BankInformationDB.cs" />
     <Compile Include="DAL\Models\Account.cs" />
+    <Compile Include="FunctionsController.cs" />
     <Compile Include="IController.cs" />
     <Compile Include="Migrations\201411062221525_InitialCreate.cs" />
     <Compile Include="Migrations\201411062221525_InitialCreate.Designer.cs">
@@ -76,6 +77,7 @@
     <Compile Include="Transfercontroller.cs" />
     <Compile Include="welcomeController.cs" />
     <Compile Include="welcomeView.cs" />
+    <Compile Include="WithdrawController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -12,7 +12,7 @@ namespace DukeBennetFS
         {
             String command = args.Length != 0 ? args[0].ToLowerInvariant() : String.Empty;
 
-            IController controller = new CustomerController();
+            IController controller = new Transfercontroller();
             switch (command)
             {
                 case "Access":

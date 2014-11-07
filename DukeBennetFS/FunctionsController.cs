@@ -14,14 +14,25 @@ namespace DukeBennetFS
         {
             using (BankInformationDB context = new BankInformationDB())
             {
-
+                // deposit 
 
 
                 Console.WriteLine("what account would you like to deposit too");
                 string accountno = Console.ReadLine();
                 Console.WriteLine("How much would you like to deposit");
-                string deposit = Console.ReadLine();
+                string value = Console.ReadLine();
                 var accounts = context.Accounts.Where(a => a.AccountNumber == accountno);
+                //not quite complete
+
+                //withdrawl
+                Account account = context.Accounts.SingleOrDefault(a => a.AccountNumber == accountno);
+
+
+                if (account != null)
+                {
+                    account.Balance = (account.Balance - decimal.Parse(value));
+                    context.SaveChanges();
+                }
             }
         }
     }

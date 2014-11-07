@@ -12,31 +12,38 @@ namespace DukeBennetFS
         {
             String command = args.Length != 0 ? args[0].ToLowerInvariant() : String.Empty;
 
-            IController controller = new Transfercontroller();
+            IController controller;
             switch (command)
             {
-                case "Access":
+               
+                  
+                case "access":
                     controller = new AccessController();
                     break;
-                case "Transfer":
+                case "transfer":
                     controller = new Transfercontroller();
                     break;
-                case "Balance":
+                case "balance":
                     controller = new BalanceController();
                     break;
-                case "Create":
+                case "create":
                     controller = new CustomerController();
                     break; 
                 case "help":
                 case "h":
-                case "-h":
-                //    controller = new HelpControler();
+                case "withdraw":
+                    controller = new WithdrawController();
                     break;
-                default:
-                 //   controller = new welcomeController();
+                case "deposit":
+                    controller = new FunctionsController();
+                    break;  
+                  default:  
+                      controller = new welcomeController();
                     break;
             }
             controller.Process(command, args);
         }
     }
+
+   
 }

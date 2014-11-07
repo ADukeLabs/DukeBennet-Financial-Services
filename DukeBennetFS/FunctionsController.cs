@@ -30,7 +30,7 @@ namespace DukeBennetFS
 
                 if (account != null)
                 {
-                    account.Balance = (account.Balance - decimal.Parse(value));
+                    account.Balance = (account.Balance + decimal.Parse(value));
                     context.SaveChanges();
                 }
             }
